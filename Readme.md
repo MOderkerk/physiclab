@@ -9,3 +9,4 @@ Small lib containing methods to calculate standard physic formulars
 
 | Version | Changes |
 |---------|---------|
+| 1.0     | Initial Version |
