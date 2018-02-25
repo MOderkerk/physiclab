@@ -8,9 +8,9 @@ pipeline  {
     }
     stages{
         stage ('Init') {
-                  validateDeclarativePipeline 'Jenkinsfile'
+                  
                   steps {
-                      
+                      validateDeclarativePipeline 'Jenkinsfile'
                       sh '''
                          echo "PATH = ${PATH}"
                          echo "M2_HOME = ${M2_HOME}"
