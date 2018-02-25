@@ -24,8 +24,8 @@ public class KonstantenTest extends TestCase {
 	 */
 	@Test
 	public void testToString() throws Exception {
-		logger.debug("Kreiszahl " + Konstanten.KREISZAHL.toPlainString());
 		logger.debug("Lichtjahr " + Konstanten.LICHTJAHR.toEngineeringString());
+		assertTrue(Konstanten.LICHTJAHR.toEngineeringString().equals("9.46050E+15"));
 	}
 
 }
