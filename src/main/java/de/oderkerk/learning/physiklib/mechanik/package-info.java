@@ -6,4 +6,4 @@
  * @since 24.02.2018
  *
  */
-package de.oderkerk.learning.physicslib.mechanics;
+package de.oderkerk.learning.physiklib.mechanik;
