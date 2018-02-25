@@ -21,4 +21,4 @@ Kleine Lib zur Berechnung von Standardformeln
 
 | Version | Changes |
 |---------|---------|
-| 1.0     | Initial Version | 
+| 1.0     | Initial Version |  
