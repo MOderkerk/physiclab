@@ -1,21 +1,21 @@
-# Odins physics formular calculator lib 
+# Odins Physikformel Lib 
 ## Description
-Small lib containing methods to calculate standard physic formulars 
+Kleine Lib zur Berechnung von Standardformeln 
 
 ## Supported physic areas
 | Area | State of implementation |
 |---------|---------|
-| Mechanis | in work |
-| Dynamics | open |
-| Vibrations / waves | open |
-| Electricity | open |
-| Electric field | open |
-| Magnetic field | open |
-| Alternating current | open |
-| Electrical resonant circuit | open |
-| General electrical engineering | open |
-| Thermodynamics | open |
-| tdb||
+| Machanik | in work |
+| Dynanik | open |
+| Schwingungen und Wellen | open |
+| Elektrizitätslehre | open |
+| Elektrisches Feld | open |
+| Magnetisches Feld | open |
+| Wechselstrom | open |
+| Elektrischer Schwingkreis | open |
+| Allgemeine Elektrotechnik | open |
+| Thermodynamik | open |
+| tdb| |
 
 ## Change Log
 
