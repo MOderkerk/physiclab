@@ -18,10 +18,3 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
-artifacts:
-  files:
-    - target/physicslib-0.0.1-SNAPSHOT.jar
-  discard-paths: yes
-cache:
-  paths:
-    - '/root/.m2/**/*'
