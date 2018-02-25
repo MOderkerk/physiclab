@@ -20,6 +20,10 @@ public class Gewichtskraft {
 
 	private static Logger logger = LoggerFactory.getLogger(Gewichtskraft.class);
 
+	private Gewichtskraft() {
+
+	}
+
 	/**
 	 * Berechne Gewichtskraft über Masse und Fallgeschwindigkeit
 	 * 

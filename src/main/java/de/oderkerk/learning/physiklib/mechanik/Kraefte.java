@@ -20,6 +20,10 @@ public class Kraefte {
 
 	private static Logger logger = LoggerFactory.getLogger(Kraefte.class);
 
+	private Kraefte() {
+
+	}
+
 	/**
 	 * Berechne die resultierende Kraft FR=F1+F2+...Fn
 	 * 

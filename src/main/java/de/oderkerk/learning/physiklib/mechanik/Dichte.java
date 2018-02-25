@@ -19,6 +19,10 @@ public class Dichte {
 
 	private static Logger logger = LoggerFactory.getLogger(Dichte.class);
 
+	private Dichte() {
+
+	}
+
 	/**
 	 * Berechne die Dichte anhand Masse und Volumen
 	 * 
