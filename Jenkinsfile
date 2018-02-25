@@ -1,5 +1,5 @@
 pipeline  {
-    if (branch == 'development'){
+    if (env.BRANCH_NAME == 'development'){
                   
               
 
