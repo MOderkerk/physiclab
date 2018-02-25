@@ -5,7 +5,7 @@ Kleine Lib zur Berechnung von Standardformeln
 ## Supported physic areas
 | Area | State of implementation |
 |---------|---------|
-| Machanik | in work |
+| Mechanik | complete |
 | Dynanik | open |
 | Schwingungen und Wellen | open |
 | Elektrizitätslehre | open |
