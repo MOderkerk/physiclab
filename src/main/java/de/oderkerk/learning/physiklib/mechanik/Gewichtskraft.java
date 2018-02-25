@@ -33,7 +33,10 @@ public class Gewichtskraft {
 		if (logger.isDebugEnabled())
 			logger.debug("Berechne Gewichtskraft mit Masse = {} in kg , Fallbeschleunigung = {} in m/s²",
 					masse.toPlainString(), fallbeschleunigung.toPlainString());
-		return masse.multiply(fallbeschleunigung);
+		BigDecimal result = masse.multiply(fallbeschleunigung);
+		if (logger.isDebugEnabled())
+			logger.debug("Ergebnis = {} N", result);
+		return result;
 
 	}
 
@@ -50,7 +53,10 @@ public class Gewichtskraft {
 		if (logger.isDebugEnabled())
 			logger.debug("Berechne Masse mit Gewichtskraft = {} in N , Fallbeschleunigung = {} in m/s²",
 					gewichtskraft.toPlainString(), fallbeschleunigung.toPlainString());
-		return gewichtskraft.divide(fallbeschleunigung);
+		BigDecimal result = gewichtskraft.divide(fallbeschleunigung);
+		if (logger.isDebugEnabled())
+			logger.debug("Ergebnis = {} KG", result);
+		return result;
 
 	}
 
@@ -67,7 +73,10 @@ public class Gewichtskraft {
 		if (logger.isDebugEnabled())
 			logger.debug("Berechne Fallbeschleunigung mit Gewichtskraft = {} in N , Masse = {} in kg",
 					gewichtskraft.toPlainString(), masse.toPlainString());
-		return gewichtskraft.divide(masse);
+		BigDecimal result = gewichtskraft.divide(masse);
+		if (logger.isDebugEnabled())
+			logger.debug("Ergebnis = {} m/s²", result);
+		return result;
 
 	}
 }
