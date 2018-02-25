@@ -1,5 +1,5 @@
 pipeline  {
-   
+    
     agent any
     tools {
         
@@ -8,7 +8,7 @@ pipeline  {
     }
     stages{
         stage ('Init') {
-                  
+                  validateDeclarativePipeline 'Jenkinsfile'
                   steps {
                       
                       sh '''
@@ -21,21 +21,19 @@ pipeline  {
         stage ('Build'){
             
             steps {
-            if (env.BRANCH_NAME == "develop") {
                 
                 sh 'mvn install'
             }
 			post {
                 success {
-                if (env.BRANCH_NAME == "develop") {
-                    junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+                    junit 'target/surefire-reports/**/*.xml' 
                 }
             }
         }
-}
+
 
     }
-}
-}
 
+
+}
 
