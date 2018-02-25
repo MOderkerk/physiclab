@@ -1,8 +1,5 @@
 pipeline  {
-    if (env.BRANCH_NAME == 'development'){
-                  
-              
-
+   
     agent any
     tools {
         
@@ -24,19 +21,21 @@ pipeline  {
         stage ('Build'){
             
             steps {
+            if (env.BRANCH_NAME == "develop") {
                 
                 sh 'mvn install'
             }
 			post {
                 success {
+                if (env.BRANCH_NAME == "develop") {
                     junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
                 }
             }
         }
-
+}
 
     }
+}
+}
 
-}
-}
 
