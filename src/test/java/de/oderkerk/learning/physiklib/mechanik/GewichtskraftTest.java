@@ -10,9 +10,9 @@ import org.junit.Test;
 
 public class GewichtskraftTest {
 
-	private final BigDecimal masse = BigDecimal.valueOf(1);
-	private final BigDecimal fallbeschleunigung = BigDecimal.valueOf(9.81);
-	private final BigDecimal gewichtskraft = BigDecimal.valueOf(9.81);
+	private final BigDecimal MASSE = BigDecimal.valueOf(1);
+	private final BigDecimal FALLBESCHLEUNIGUNG = BigDecimal.valueOf(9.81);
+	private final BigDecimal GEWICHTSKRAFT = BigDecimal.valueOf(9.81);
 
 	@Before
 	public void setUp() throws Exception {
@@ -24,17 +24,17 @@ public class GewichtskraftTest {
 
 	@Test
 	public void testBerechneGewichtskraft() throws Exception {
-		assertEquals(gewichtskraft, Gewichtskraft.berechneGewichtskraft(masse, fallbeschleunigung));
+		assertEquals(GEWICHTSKRAFT, Gewichtskraft.berechneGewichtskraft(MASSE, FALLBESCHLEUNIGUNG));
 	}
 
 	@Test
 	public void testBerechneMasse() throws Exception {
-		assertEquals(masse, Gewichtskraft.berechneMasse(gewichtskraft, fallbeschleunigung));
+		assertEquals(MASSE, Gewichtskraft.berechneMasse(GEWICHTSKRAFT, FALLBESCHLEUNIGUNG));
 	}
 
 	@Test
 	public void testBerechneFallbeschleunigung() throws Exception {
-		assertEquals(fallbeschleunigung, Gewichtskraft.berechneFallbeschleunigung(gewichtskraft, masse));
+		assertEquals(FALLBESCHLEUNIGUNG, Gewichtskraft.berechneFallbeschleunigung(GEWICHTSKRAFT, MASSE));
 	}
 
 }

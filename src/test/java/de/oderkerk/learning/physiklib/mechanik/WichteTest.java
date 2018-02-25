@@ -8,23 +8,23 @@ import junit.framework.TestCase;
 
 public class WichteTest extends TestCase {
 
-	BigDecimal wichte = BigDecimal.valueOf(2);
-	BigDecimal volumen = BigDecimal.valueOf(2);
-	BigDecimal gewichtskraft = BigDecimal.valueOf(4);
+	private final BigDecimal WICHTE = BigDecimal.valueOf(2);
+	private final BigDecimal VOLUMEN = BigDecimal.valueOf(2);
+	private final BigDecimal GEWICHTSKRAFT = BigDecimal.valueOf(4);
 
 	@Test
 	public void testBerechneWichte() throws Exception {
-		assertEquals(wichte, Wichte.berechneWichte(gewichtskraft, volumen));
+		assertEquals(WICHTE, Wichte.berechneWichte(GEWICHTSKRAFT, VOLUMEN));
 	}
 
 	@Test
 	public void testBerechneVolumen() throws Exception {
-		assertEquals(volumen, Wichte.berechneVolumen(gewichtskraft, wichte));
+		assertEquals(VOLUMEN, Wichte.berechneVolumen(GEWICHTSKRAFT, WICHTE));
 	}
 
 	@Test
 	public void testBerechneGewichtskraft() throws Exception {
-		assertEquals(gewichtskraft, Wichte.berechneGewichtskraft(volumen, wichte));
+		assertEquals(GEWICHTSKRAFT, Wichte.berechneGewichtskraft(VOLUMEN, WICHTE));
 	}
 
 }

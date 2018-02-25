@@ -10,9 +10,9 @@ import org.junit.Test;
 
 public class DichteTest {
 
-	private BigDecimal masse = BigDecimal.valueOf(4);
-	private BigDecimal volumen = BigDecimal.valueOf(2);
-	private BigDecimal dichte = BigDecimal.valueOf(2);
+	private final BigDecimal MASSE = BigDecimal.valueOf(4);
+	private final BigDecimal VOLUMEN = BigDecimal.valueOf(2);
+	private final BigDecimal DICHTE = BigDecimal.valueOf(2);
 
 	@Before
 	public void setUp() throws Exception {
@@ -24,17 +24,17 @@ public class DichteTest {
 
 	@Test
 	public void testBerechneDichte() throws Exception {
-		assertEquals(dichte, Dichte.berechneDichte(masse, volumen));
+		assertEquals(DICHTE, Dichte.berechneDichte(MASSE, VOLUMEN));
 	}
 
 	@Test
 	public void testBerechneMasse() throws Exception {
-		assertEquals(masse, Dichte.berechneMasse(volumen, dichte));
+		assertEquals(MASSE, Dichte.berechneMasse(VOLUMEN, DICHTE));
 	}
 
 	@Test
 	public void testBerechneVolumen() throws Exception {
-		assertEquals(volumen, Dichte.berechneVolumen(masse, dichte));
+		assertEquals(VOLUMEN, Dichte.berechneVolumen(MASSE, DICHTE));
 	}
 
 }
