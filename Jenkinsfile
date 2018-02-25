@@ -1,7 +1,7 @@
 pipeline  {
     
 	options {
-	    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '10', artifactNumToKeepStr: '10', daysToKeepStr: '5', numToKeepStr: '5')), disableConcurrentBuilds(), pipelineTriggers([cron('@midnight'), [$class: 'PeriodicFolderTrigger', interval: '7d']])])	    
+	    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '10', artifactNumToKeepStr: '10', daysToKeepStr: '5', numToKeepStr: '5'))])	    
 	    
 	}
 
