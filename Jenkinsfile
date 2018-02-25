@@ -1,11 +1,9 @@
 pipeline  {
-    node {
-        properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')), [$class: 'BuildConfigProjectProperty', name: '', namespace: '', resourceVersion: '', uid: ''], disableConcurrentBuilds(), pipelineTriggers([cron('@midnight'), [$class: 'PeriodicFolderTrigger', interval: '7d']])])
-    }
+    
 
     agent any
     tools {
-        
+        properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')), [$class: 'BuildConfigProjectProperty', name: '', namespace: '', resourceVersion: '', uid: ''], disableConcurrentBuilds(), pipelineTriggers([cron('@midnight'), [$class: 'PeriodicFolderTrigger', interval: '7d']])])
         maven 'maven'
         jdk 'jdk8'
     }
