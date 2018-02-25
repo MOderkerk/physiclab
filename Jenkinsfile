@@ -1,9 +1,12 @@
 pipeline  {
     
-	options {
-	    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '10', artifactNumToKeepStr: '10', daysToKeepStr: '5', numToKeepStr: '5'))])	    
-	    
-	}
+	triggers {
+        cron '@daily'
+    }
+    options{
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+    }
+
 
     agent any
     tools {
