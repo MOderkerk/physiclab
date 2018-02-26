@@ -1,7 +1,7 @@
 pipeline  {
     
 	triggers {
-        cron '@daily'
+        cron '@midnight'
     }
     options{
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
@@ -38,6 +38,12 @@ pipeline  {
                     junit 'target/surefire-reports/**/*.xml' 
                 }
             }
+        }
+        
+        stage ('Deploy')
+        {
+    
+    
         }
 
 
