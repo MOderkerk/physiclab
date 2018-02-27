@@ -32,7 +32,7 @@ public class GeradlinigeBewegung {
 	 */
 	public static BigDecimal berechneWeg(BigDecimal zeit, BigDecimal geschwindigkeit) {
 		if (logger.isDebugEnabled())
-			logger.debug("Berechne Weg  mit Zeit = {} und Gescwindigkeit = {}", zeit.toPlainString(),
+			logger.debug("Berechne Weg  mit Zeit = {} und Geschwindigkeit = {}", zeit.toPlainString(),
 					geschwindigkeit.toPlainString());
 		BigDecimal result = geschwindigkeit.multiply(zeit);
 		if (logger.isDebugEnabled())
