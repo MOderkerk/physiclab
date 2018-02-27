@@ -22,6 +22,7 @@ public class Reibung {
 	 * Berchnung der Reibungszahl
 	 * 
 	 * @param reibungszahl
+	 *            int
 	 * @param normalkraft
 	 *            in N
 	 * @return reibungskraft in N
@@ -61,6 +62,7 @@ public class Reibung {
 	 * @param reibungskraft
 	 *            in N
 	 * @param reibungszahl
+	 *            int
 	 * @return Normalkraft in N
 	 */
 	public static BigDecimal berechneNormalkraft(BigDecimal reibungskraft, BigDecimal reibungszahl) {

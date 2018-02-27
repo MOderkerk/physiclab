@@ -1,7 +1,9 @@
 /**
- * All classes for mechanics releated functions
+ * 
  */
 /**
+ * Alle Funktionen zum Thema Mechanik
+ * 
  * @author Odin
  * @since 24.02.2018
  *

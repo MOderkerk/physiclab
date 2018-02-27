@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Berechnungen zum Thema Auftrieb in Fluessigkeiten
+ * 
  * @author Odin
  * @since 25.02.2018
  *
@@ -17,7 +19,7 @@ public class AuftriebInFluessigkeiten {
 	private static Logger logger = LoggerFactory.getLogger(AuftriebInFluessigkeiten.class);
 
 	/**
-	 * Berechnung der AUftriebskraft
+	 * Berechnung der Auftriebskraft
 	 * 
 	 * @param volumen
 	 *            im m³

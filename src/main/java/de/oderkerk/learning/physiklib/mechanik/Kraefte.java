@@ -28,7 +28,7 @@ public class Kraefte {
 	 * Berechne die resultierende Kraft FR=F1+F2+...Fn
 	 * 
 	 * @param kraefte
-	 *            List<Bigdecimal> mit Einzelkräften
+	 *            Liste mit Einzelkräften
 	 * @return Resultierende Kraft BigDecimal
 	 */
 	public static BigDecimal berechneResultierendeKraft(List<BigDecimal> kraefte) {

@@ -1,7 +1,9 @@
 /**
- * All classes for dynamic releated functions
+ *
  */
 /**
+ * Alle Funktionen zum Thema Dynamik
+ * 
  * @author Odin
  * @since 24.02.2018
  *

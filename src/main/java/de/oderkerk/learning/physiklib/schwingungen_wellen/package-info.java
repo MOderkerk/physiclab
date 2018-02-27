@@ -1,7 +1,9 @@
 /**
- * All classes for vobration and waves releated functions
+ * 
  */
 /**
+ * Alle Funktionen zum Thema Schwingungen und Wellen
+ * 
  * @author Odin
  * @since 24.02.2018
  *

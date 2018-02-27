@@ -65,8 +65,10 @@ public class Dichte {
 	 * Berechne das Volumen anhand von Masse und Dichte
 	 * 
 	 * @param masse
+	 *            in kg
 	 * @param dichte
-	 * @return
+	 *            in kg/m³
+	 * @return valumen m³
 	 */
 	public static BigDecimal berechneVolumen(BigDecimal masse, BigDecimal dichte) {
 		if (logger.isDebugEnabled())

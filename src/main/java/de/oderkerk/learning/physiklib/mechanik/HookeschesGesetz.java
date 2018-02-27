@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Alle Berechnungen zum Thema Hookesches Gesetz
+ * 
  * @author Odin
  * @since 25.02.2018
  *
