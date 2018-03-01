@@ -8,10 +8,25 @@
   <packaging>jar</packaging>
 
   <name>physicslib</name>
-  <url>http://maven.apache.org</url>
-
+  <url>http://www.marcooderkerk.de</url>
+  <description>Lib für Berechnung von physikalischen Formeln</description>
+  <organization>
+  	<name>Marco Oderkerk</name>
+  	<url>http://www.marcooderkerk.de</url>
+  </organization>
+  <licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+  </licenses>
+  <inceptionYear>${current.year}</inceptionYear>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    
   </properties>
 
   <dependencies>
@@ -31,8 +46,41 @@
 	<groupId>ch.qos.logback</groupId>
 	<artifactId>logback-classic</artifactId>
 	<version>1.0.13</version>
+	 <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions>      
 </dependency>
   </dependencies>
+  <build>
+    <plugins>
+       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.14</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.12</version>
+        <executions>
+         <execution>
+            <id>timestamp-property</id>
+            <goals>
+             <goal>timestamp-property</goal>
+            </goals>
+            <phase>check</phase>
+            <configuration>
+              <name>current.year</name>
+              <pattern>yyyy</pattern>
+            </configuration>
+          </execution>
+  </executions>
+</plugin>
+    </plugins>
+  </build>
   <reporting>
     <plugins>
       <plugin>
@@ -48,6 +96,8 @@
           <show>public</show>
         </configuration>
       </plugin>
+      
     </plugins>
   </reporting>
+  
 </project>

@@ -19,8 +19,10 @@ public class KonstantenTest extends TestCase {
 	Logger logger = LoggerFactory.getLogger(KonstantenTest.class);
 
 	/**
-	 * Test method for
+	 *
 	 * {@link de.oderkerk.learning.physiklib.allgemein.Konstanten#toString()}.
+	 * 
+	 * @throws Exception
 	 */
 	@Test
 	public void testToString() throws Exception {
