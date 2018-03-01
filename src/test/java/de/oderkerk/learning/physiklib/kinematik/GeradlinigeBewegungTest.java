@@ -25,6 +25,7 @@ package de.oderkerk.learning.physiklib.kinematik;
 
 
 
+
 import java.math.BigDecimal;
 
 import org.junit.Test;

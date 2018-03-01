@@ -25,6 +25,7 @@ package de.oderkerk.learning.physiklib.allgemein;
 
 
 
+
 import java.math.BigDecimal;
 
 import org.slf4j.Logger;

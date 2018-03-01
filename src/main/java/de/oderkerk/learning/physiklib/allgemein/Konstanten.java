@@ -22,6 +22,7 @@ package de.oderkerk.learning.physiklib.allgemein;
  */
 
 
+
 import java.math.BigDecimal;
 
 /**
@@ -62,7 +63,7 @@ public class Konstanten {
 			.multiply(BigDecimal.valueOf(Math.pow(10, 8)));
 
 	/**
-	 * Dielektrizit�tskonstante e0 = 8.854187 * 10^-12 F/m
+	 * Dielektrizit?tskonstante e0 = 8.854187 * 10^-12 F/m
 	 */
 	public final static BigDecimal DIELEKTRIZITAETS_KONSTANTE = BigDecimal.valueOf(8.854187)
 			.multiply(BigDecimal.valueOf(Math.pow(10, -12)));

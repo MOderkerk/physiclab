@@ -25,6 +25,7 @@ package de.oderkerk.learning.physiklib.mechanik;
 
 
 
+
 import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
