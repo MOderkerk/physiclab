@@ -1,7 +1,29 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.mechanik;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+
+
 
 import java.math.BigDecimal;
 
@@ -28,8 +50,8 @@ public class Wichte {
 	 * @param gewichtskraft
 	 *            in N
 	 * @param volumen
-	 *            in m³
-	 * @return wichte in N/m³
+	 *            in m?
+	 * @return wichte in N/m?
 	 */
 	public static BigDecimal berechneWichte(BigDecimal gewichtskraft, BigDecimal volumen) {
 		if (logger.isDebugEnabled())
@@ -38,7 +60,7 @@ public class Wichte {
 
 		BigDecimal result = gewichtskraft.divide(volumen);
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} N/m³", result);
+			logger.debug("Ergebnis = {} N/m?", result);
 		return result;
 
 	}
@@ -49,8 +71,8 @@ public class Wichte {
 	 * @param gewichtskraft
 	 *            in N
 	 * @param wichte
-	 *            in N/m³
-	 * @return volumen in m³
+	 *            in N/m?
+	 * @return volumen in m?
 	 */
 	public static BigDecimal berechneVolumen(BigDecimal gewichtskraft, BigDecimal wichte) {
 		if (logger.isDebugEnabled())
@@ -59,7 +81,7 @@ public class Wichte {
 
 		BigDecimal result = gewichtskraft.divide(wichte);
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} m³", result);
+			logger.debug("Ergebnis = {} m?", result);
 		return result;
 
 	}
@@ -68,9 +90,9 @@ public class Wichte {
 	 * Berechnung der Geichtskraft mit Volumen und Wichte
 	 * 
 	 * @param volumen
-	 *            m³
+	 *            m?
 	 * @param wichte
-	 *            N/m³
+	 *            N/m?
 	 * @return gewichtskraft N
 	 */
 	public static BigDecimal berechneGewichtskraft(BigDecimal volumen, BigDecimal wichte) {

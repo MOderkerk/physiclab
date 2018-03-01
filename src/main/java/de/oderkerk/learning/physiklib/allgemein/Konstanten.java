@@ -1,7 +1,26 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.allgemein;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 
 import java.math.BigDecimal;
 
@@ -15,7 +34,7 @@ import java.math.BigDecimal;
 public class Konstanten {
 
 	/**
-	 * Kreiszahl Pi = 3.14159265358979323846 Für normale Berechnungen reicht diese
+	 * Kreiszahl Pi = 3.14159265358979323846 F?r normale Berechnungen reicht diese
 	 * Genauigkeit normalerweise aus.
 	 */
 	public final static BigDecimal KREISZAHL = BigDecimal.valueOf(3.14159265358979323846);
@@ -32,7 +51,7 @@ public class Konstanten {
 			.multiply(BigDecimal.valueOf(Math.pow(10, -19)));
 
 	/**
-	 * Gravitationskonstante G,k = 6.67259 * 10^-11 m³g^-1s^-2
+	 * Gravitationskonstante G,k = 6.67259 * 10^-11 m?g^-1s^-2
 	 */
 	public final static BigDecimal GRAVITATIONS_KONSTANTE = BigDecimal.valueOf(6.67259d)
 			.multiply(BigDecimal.valueOf(Math.pow(10, -11)));
@@ -43,15 +62,15 @@ public class Konstanten {
 			.multiply(BigDecimal.valueOf(Math.pow(10, 8)));
 
 	/**
-	 * Dielektrizitätskonstante e0 = 8.854187 * 10^-12 F/m
+	 * Dielektrizit�tskonstante e0 = 8.854187 * 10^-12 F/m
 	 */
 	public final static BigDecimal DIELEKTRIZITAETS_KONSTANTE = BigDecimal.valueOf(8.854187)
 			.multiply(BigDecimal.valueOf(Math.pow(10, -12)));
 
 	/**
-	 * Permeabilitätskonstante u0 (4*piE)^-1 in H/m
+	 * Permeabilitaetskonstante u0 (4*piE)^-1 in H/m
 	 */
-	public final static BigDecimal PERMEABILITÄTSKONSTANTE = BigDecimal.valueOf(5).multiply(KREISZAHL)
+	public final static BigDecimal PERMEABILITAETSKONSTANTE = BigDecimal.valueOf(5).multiply(KREISZAHL)
 			.multiply(BigDecimal.valueOf(Math.pow(10, -7)));
 
 	/**

@@ -1,7 +1,29 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.mechanik;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+
+
 
 import java.math.BigDecimal;
 
@@ -25,7 +47,7 @@ public class Gewichtskraft {
 	}
 
 	/**
-	 * Berechne Gewichtskraft über Masse und Fallgeschwindigkeit
+	 * Berechne Gewichtskraft ?ber Masse und Fallgeschwindigkeit
 	 * 
 	 * @param masse
 	 *            in kg
@@ -35,7 +57,7 @@ public class Gewichtskraft {
 	 */
 	public static BigDecimal berechneGewichtskraft(BigDecimal masse, BigDecimal fallbeschleunigung) {
 		if (logger.isDebugEnabled())
-			logger.debug("Berechne Gewichtskraft mit Masse = {} in kg , Fallbeschleunigung = {} in m/s²",
+			logger.debug("Berechne Gewichtskraft mit Masse = {} in kg , Fallbeschleunigung = {} in m/s?",
 					masse.toPlainString(), fallbeschleunigung.toPlainString());
 		BigDecimal result = masse.multiply(fallbeschleunigung);
 		if (logger.isDebugEnabled())
@@ -45,7 +67,7 @@ public class Gewichtskraft {
 	}
 
 	/**
-	 * Berechnung der Masse über Gewichtskraft und Fallgeschwindigkeit
+	 * Berechnung der Masse ?ber Gewichtskraft und Fallgeschwindigkeit
 	 * 
 	 * @param gewichtskraft
 	 *            in N
@@ -55,7 +77,7 @@ public class Gewichtskraft {
 	 */
 	public static BigDecimal berechneMasse(BigDecimal gewichtskraft, BigDecimal fallbeschleunigung) {
 		if (logger.isDebugEnabled())
-			logger.debug("Berechne Masse mit Gewichtskraft = {} in N , Fallbeschleunigung = {} in m/s²",
+			logger.debug("Berechne Masse mit Gewichtskraft = {} in N , Fallbeschleunigung = {} in m/s?",
 					gewichtskraft.toPlainString(), fallbeschleunigung.toPlainString());
 		BigDecimal result = gewichtskraft.divide(fallbeschleunigung);
 		if (logger.isDebugEnabled())
@@ -71,7 +93,7 @@ public class Gewichtskraft {
 	 *            in N
 	 * @param masse
 	 *            in kg
-	 * @return fallbeschleunigung in m/s²
+	 * @return fallbeschleunigung in m/s?
 	 */
 	public static BigDecimal berechneFallbeschleunigung(BigDecimal gewichtskraft, BigDecimal masse) {
 		if (logger.isDebugEnabled())
@@ -79,7 +101,7 @@ public class Gewichtskraft {
 					gewichtskraft.toPlainString(), masse.toPlainString());
 		BigDecimal result = gewichtskraft.divide(masse);
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} m/s²", result);
+			logger.debug("Ergebnis = {} m/s?", result);
 		return result;
 
 	}

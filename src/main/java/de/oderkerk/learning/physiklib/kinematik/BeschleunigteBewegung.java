@@ -1,7 +1,29 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.kinematik;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+
+
 
 import java.math.BigDecimal;
 
@@ -26,7 +48,7 @@ public class BeschleunigteBewegung {
 	 * @param zeit
 	 *            in s
 	 * @param beschleunigung
-	 *            m/s²
+	 *            m/s?
 	 * @return weg m
 	 */
 	public static BigDecimal berechneWegOhneAnfangsgeschwindigkeit(BigDecimal zeit, BigDecimal beschleunigung) {
@@ -46,14 +68,14 @@ public class BeschleunigteBewegung {
 	 *            in s
 	 * @param weg
 	 *            in m
-	 * @return beschleunigung m/s²
+	 * @return beschleunigung m/s?
 	 */
 	public static BigDecimal berechneBeschleunigungOhneAnfangsgeschwindigkeit(BigDecimal zeit, BigDecimal weg) {
 		if (logger.isDebugEnabled())
 			logger.debug("Berechne Weg  mit Zeit = {} und Weg = {} , ", zeit.toPlainString(), weg.toPlainString());
 		BigDecimal result = (BigDecimal.valueOf(2).multiply(weg)).divide(zeit.pow(2));
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} m/s²", result.toPlainString());
+			logger.debug("Ergebnis = {} m/s?", result.toPlainString());
 		return result;
 	}
 
@@ -61,7 +83,7 @@ public class BeschleunigteBewegung {
 	 * Berechnung der Zeit ohne Anfangsgeschwindigkeit.
 	 * 
 	 * @param beschleunigung
-	 *            in m/s²
+	 *            in m/s?
 	 * @param weg
 	 *            in m
 	 * @return Zeit in s
@@ -72,7 +94,7 @@ public class BeschleunigteBewegung {
 					weg.toPlainString());
 		BigDecimal result = RootCalc.root(weg.multiply(BigDecimal.valueOf(0)).divide(beschleunigung), 2);
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} m/s²", result.toPlainString());
+			logger.debug("Ergebnis = {} m/s?", result.toPlainString());
 		return result;
 	}
 }

@@ -1,7 +1,29 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.mechanik;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -10,7 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Kräfte
+ * Kr?fte
  * 
  * @author Odin
  * @since 25.02.2018
@@ -28,12 +50,12 @@ public class Kraefte {
 	 * Berechne die resultierende Kraft FR=F1+F2+...Fn
 	 * 
 	 * @param kraefte
-	 *            Liste mit Einzelkräften
+	 *            Liste mit Einzelkr?ften
 	 * @return Resultierende Kraft BigDecimal
 	 */
 	public static BigDecimal berechneResultierendeKraft(List<BigDecimal> kraefte) {
 		if (logger.isDebugEnabled())
-			logger.debug("Berechne Resultierende Kraft mit den einzelnen Kräften {}", kraefte);
+			logger.debug("Berechne Resultierende Kraft mit den einzelnen Kr?ften {}", kraefte);
 		BigDecimal resultierendeKraft = BigDecimal.valueOf(0);
 		for (BigDecimal kraft : kraefte) {
 			resultierendeKraft = resultierendeKraft.add(kraft);

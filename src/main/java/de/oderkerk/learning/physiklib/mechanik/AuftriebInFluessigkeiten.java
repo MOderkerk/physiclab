@@ -1,7 +1,29 @@
-/**
- * 
- */
+
 package de.oderkerk.learning.physiklib.mechanik;
+
+/*-
+ * #%L
+ * physicslib
+ * %%
+ * Copyright (C) 2018 Marco Oderkerk
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+
+
 
 import java.math.BigDecimal;
 
@@ -22,11 +44,11 @@ public class AuftriebInFluessigkeiten {
 	 * Berechnung der Auftriebskraft
 	 * 
 	 * @param volumen
-	 *            im m³
+	 *            im m?
 	 * @param fallbeschleunigung
-	 *            m/s²
+	 *            m/s?
 	 * @param dichte
-	 *            kg/m³
+	 *            kg/m?
 	 * @return N
 	 */
 	public static BigDecimal berechneAuftriebskraft(BigDecimal volumen, BigDecimal fallbeschleunigung,
@@ -44,12 +66,12 @@ public class AuftriebInFluessigkeiten {
 	 * Berechnung der Dichte
 	 * 
 	 * @param volumen
-	 *            m³
+	 *            m?
 	 * @param fallbeschleunigung
-	 *            m/s²
+	 *            m/s?
 	 * @param auftriebskraft
 	 *            N
-	 * @return kg/m³
+	 * @return kg/m?
 	 */
 	public static BigDecimal berechneDichte(BigDecimal volumen, BigDecimal fallbeschleunigung,
 			BigDecimal auftriebskraft) {
@@ -58,7 +80,7 @@ public class AuftriebInFluessigkeiten {
 					volumen.toPlainString(), fallbeschleunigung.toPlainString(), auftriebskraft.toPlainString());
 		BigDecimal result = auftriebskraft.divide((volumen.multiply(fallbeschleunigung)));
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} kg/m³", result.toPlainString());
+			logger.debug("Ergebnis = {} kg/m?", result.toPlainString());
 		return result;
 	}
 
@@ -66,12 +88,12 @@ public class AuftriebInFluessigkeiten {
 	 * Berechnung des Volumens
 	 * 
 	 * @param dichte
-	 *            kg/m³
+	 *            kg/m?
 	 * @param fallbeschleunigung
-	 *            m/s²
+	 *            m/s?
 	 * @param auftriebskraft
 	 *            N
-	 * @return volumen m³
+	 * @return volumen m?
 	 */
 	public static BigDecimal berechneVolumen(BigDecimal dichte, BigDecimal fallbeschleunigung,
 			BigDecimal auftriebskraft) {
@@ -80,7 +102,7 @@ public class AuftriebInFluessigkeiten {
 					auftriebskraft.toPlainString(), fallbeschleunigung.toPlainString(), dichte.toPlainString());
 		BigDecimal result = auftriebskraft.divide((fallbeschleunigung.multiply(dichte)));
 		if (logger.isDebugEnabled())
-			logger.debug("Ergebnis = {} m³", result.toPlainString());
+			logger.debug("Ergebnis = {} m?", result.toPlainString());
 		return result;
 	}
 }
