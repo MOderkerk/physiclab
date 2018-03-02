@@ -16,4 +16,5 @@ script:
    - mvn test -B -V
 after_success:
    - mvn site -DskipTests=true -Dmaven.javadoc.skip=false -B -V
+   - ls -all
    - "BRANCH_TO_MERGE='deployment' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=MOderkerk/physiclab gist.sh"
