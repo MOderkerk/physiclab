@@ -1,4 +1,5 @@
-# Odins Physikformel Lib 
+# Odins Physikformel Lib   
+[![Build Status](https://travis-ci.org/MOderkerk/physiclab.svg?branch=development)](https://travis-ci.org/MOderkerk/physiclab)
 ## Description
 Kleine Lib zur Berechnung von Standardformeln 
 
