@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.oderkerk.learning</groupId>
   <artifactId>physicslib</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>physicslib</name>
@@ -27,7 +26,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    
+    <github.global.server>github</github.global.server>
+    <github.global.host>api.github.com</github.global.host>
   </properties>
 
   <dependencies>
@@ -87,6 +87,11 @@
           </execution>
   </executions>
 </plugin>
+    <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.3</version>
+        </plugin>
     </plugins>
   </build>
   <reporting>
@@ -104,8 +109,12 @@
           <show>public</show>
         </configuration>
       </plugin>
-      
     </plugins>
   </reporting>
   
+  <scm>
+  	<url>scm:git:https://github.com/MOderkerk/physiclab</url>
+  	<connection>scm:git:https://github.com/MOderkerk/physiclab</connection>
+    <tag>physicslib-0.0.1</tag>
+  </scm>
 </project>

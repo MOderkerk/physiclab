@@ -14,7 +14,6 @@ install: true
 script: 
    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
    - mvn test -B -V
+afterSuccess:
    - mvn site -DskipTests=true -Dmaven.javadoc.skip=false -B -V
-after_success:
-   - "curl chmod a+x gist.sh"
-   - "BRANCHES_TO_MERGE_REGEX='^f/' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=MOderkerk/physiclab ./gist.sh" 
+   - mvn release:prepare release:perform
