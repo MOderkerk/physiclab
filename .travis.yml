@@ -16,4 +16,4 @@ script:
    - mvn test -B -V
 after_success:
    - chmod +x /home/travis/build/MOderkerk/physiclab/gist.sh
-   - "BRANCH_TO_MERGE='deployment' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=MOderkerk/physiclab /home/travis/build/MOderkerk/physiclab/gist.sh"
+   - "BRANCH_TO_MERGE=deployment BRANCH_TO_MERGE_INTO=master GITHUB_REPO=MOderkerk/physiclab /home/travis/build/MOderkerk/physiclab/gist.sh"
