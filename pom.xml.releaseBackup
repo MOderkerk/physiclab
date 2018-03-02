@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>de.oderkerk.learning</groupId>
+  <artifactId>physicslib</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>physicslib</name>
+  <url>http://www.marcooderkerk.de</url>
+  <description>Lib für Berechnung von physikalischen Formeln</description>
+  <organization>
+  	<name>Marco Oderkerk</name>
+  	<url>http://www.marcooderkerk.de</url>
+  </organization>
+  <licenses>
+		<license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+  </licenses>
+  <inceptionYear>2018</inceptionYear>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <github.global.server>github</github.global.server>
+    <github.global.host>api.github.com</github.global.host>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>1.7.25</version>
+    </dependency>
+    
+    <dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-classic</artifactId>
+	<version>1.0.13</version>
+	 <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions>      
+</dependency>
+  </dependencies>
+  <build>
+    <plugins>
+       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.14</version>
+        <configuration>
+              <licenseName>apache_v2</licenseName>
+              <roots>
+                <root>src/main/java</root>
+                <root>src/test</root>
+              </roots>
+            </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.12</version>
+        <executions>
+         <execution>
+            <id>timestamp-property</id>
+            <goals>
+             <goal>timestamp-property</goal>
+            </goals>
+            <phase>check</phase>
+            <configuration>
+              <name>current.year</name>
+              <pattern>yyyy</pattern>
+            </configuration>
+          </execution>
+  </executions>
+</plugin>
+    <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.3</version>
+        </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>javancss-maven-plugin</artifactId>
+        <version>2.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <show>public</show>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+  
+  <scm>
+  	<url>scm:git:https://github.com/MOderkerk/physiclab</url>
+  	<connection>scm:git:https://github.com/MOderkerk/physiclab</connection>
+  </scm>
+</project>
