@@ -2,11 +2,13 @@ language: java
 env:
 # Github deployment key
   secure: "CY9VwgvPfjCec/veZUuALMvdJxhb4GGtBQPY2kxRXSuJZ7oAnXX15iObAZDxjcLVahZn4cl4ub2BfgEoyVAZ+vFUGLh6DHgzQH0g3cJRlevbKWp3gdoHzZVuJxQf5BEvvm7PgdNMFqTkXl4Qp8Li8fLGHtFoOY1ZNL50UP5V52DQVXkkGVltqtUm10K9eBeLXnYEA3f+UPZ0X78qYFtUp6eEFrVopZvaiZyX+eKXQekQEYD4XvCNit2N7chWZb8vnpt0uCaTpl6nfywChFRsVTv3mHz/4laUzidafr6CKNamzsrWQ/m4IFUVNu8aG9B7A+FuGf/rUlLYBH0etFFiO6NIsh5k2VivJJMriu4OhEmw8dEvEAbEPPwu0im9M6ZK2ZBZUAyfOFhc31PCO60h+CFOL/8gEawQXuQy8a450PJ/wB37PgbF7h3gCnONDY+IYz3P6A8t/O7/mJasnwBYmmnPM+eNPq9o/ktIgYE3QNSS+exwHW2M/ElG3blSP8WR9FlvC8m3P9LlrwSJDCqbR7SnNaXf7ugV81g/mVBqS0jRHmU0vYrQnQrKsNDWkzbXEluq4KcuoLsLhQm/4VRulAmzfZQLrWzcRuV5znjx2t8z/bdQPeR6oAQhXg7Y81at7hlozsYwEAEiBQhRmh6QTrApmb7vQLul0hYTAWXRy38="
-
+  BRANCH_TO_MERGE=deployment 
+  BRANCH_TO_MERGE_INTO=master 
+  export GITHUB_REPO=MOderkerk/physiclab 
 matrix:
 jdk: 
   - oraclejdk8
-  - oraclejdk9
+#  - oraclejdk9
 cache:
   directories:
   - $HOME/.m2
@@ -15,8 +17,5 @@ script:
    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
    - mvn test -B -V
 after_success:
-   - chmod +x /home/travis/build/MOderkerk/physiclab/gist.sh
-   - export BRANCH_TO_MERGE=deployment 
-   - export BRANCH_TO_MERGE_INTO=master 
-   - export GITHUB_REPO=MOderkerk/physiclab 
+   - chmod +x /home/travis/build/MOderkerk/physiclab/gist.sh  
    - /home/travis/build/MOderkerk/physiclab/gist.sh"
