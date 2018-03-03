@@ -1,4 +1,4 @@
-#!/bin/bash --debug
+#!/bin/bash -c
 export GIT_COMMITTER_EMAIL='github@oderkerk.de'
 export GIT_COMMITTER_NAME='automated deploy'
 echo $TRAVIS_REPO_SLUG
