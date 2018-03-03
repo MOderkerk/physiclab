@@ -1,11 +1,8 @@
-#!/bin/bash -e
-
-
-
+#!/bin/bash
 export GIT_COMMITTER_EMAIL='github@oderkerk.de'
 export GIT_COMMITTER_NAME='automated deploy'
-
-
+echo $TRAVIS_REPO_SLUG
+echo $GIT_REPO 
 # Since Travis does a partial checkout, we need to get the whole thing
 repo_temp=$(mktemp -d)
 git clone "https://github.com/$TRAVIS_REPO_SLUG" "$repo_temp"
