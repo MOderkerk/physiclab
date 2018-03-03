@@ -17,5 +17,6 @@ script:
    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
    - mvn test -B -V
 after_success:
+   - ls -all
    - chmod +x /home/travis/build/MOderkerk/physiclab/gist.sh  
-   - gist.sh
+   - ./gist.sh
