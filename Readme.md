@@ -1,5 +1,6 @@
 # Odins Physikformel Lib   
 [![Build Status](https://travis-ci.org/MOderkerk/physiclab.svg?branch=development)](https://travis-ci.org/MOderkerk/physiclab)
+[![DepShield Badge](https://depshield.sonatype.org/badges/MOderkerk/physiclab/depshield.svg)](https://depshield.github.io)
 ## Description
 Kleine Lib zur Berechnung von Standardformeln 
 
